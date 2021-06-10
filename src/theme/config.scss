@@ -1,0 +1,36 @@
+$namespace: 'my'!default;
+$state-prefix: 'is-'!default;
+$modifier-separator: '--'!default;
+
+$black: black!default;
+$white: white!default;
+$theme: (
+    primary: rgb(64, 158, 255),
+    success: rgb(103, 194, 58),
+    warning: rgb(230, 162, 60),
+    danger: rgb(245, 108, 108),
+    info: rgb(144, 147, 153)
+)!default;
+
+$word-color-default: #606266!default;
+$border-color-default: #dcdfe6!default;
+
+$border-radius: (
+    mini: 5px,
+    round: 20px,
+    circle: 50%
+)!default;
+
+$padding-button: (
+    large: 12px 20px,
+    medium: 10px 15px,
+    small: 9px 10px,
+    mini: 7px 7px
+)!default;
+
+$padding-button-circle: (
+    large: 20px,
+    medium: 15px,
+    small: 10px,
+    mini: 7px
+)!default;

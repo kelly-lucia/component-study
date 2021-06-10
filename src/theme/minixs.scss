@@ -1,0 +1,27 @@
+
+@charset 'utf-8';
+@import './config.scss';
+
+@mixin name($block) {
+    $B: $namespace+'-'+$block;
+    .#{$B} {
+        @content;
+    }
+}
+
+@mixin  type($type, $modifier) {
+    $currentSelector: #{ $namespace + '-' + $type + '--' + $modifier};
+    @at-root {
+        .#{$currentSelector} {
+            @content
+        }
+    }
+}
+
+@mixin  when($state) {
+    @at-root {
+        &.#{$state-prefix + $state} {
+          @content;
+        }
+    }
+}

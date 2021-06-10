@@ -1,0 +1,104 @@
+@import '../../theme/minixs.scss';
+
+@include name(button) {
+    border-radius: map-get($border-radius, 'mini');
+    cursor: pointer;
+    margin-right: 5px;
+    line-height: 1;
+
+    @each $key in ('primary', 'success', 'warning', 'danger', 'info') {
+        @include type(button, $key) {
+            color: $white;
+            background-color: map-get($theme, $key);
+            &:hover, &:active {
+                background-color: rgba(map-get($theme, $key), $alpha: 0.8);
+            }
+            @include when('disabled') {
+                cursor: not-allowed;
+                background-color: rgba(map-get($theme, $key), $alpha: 0.5);
+            }
+            @include when('plain') {
+                & {
+                    color: map-get($theme, $key);
+                    background-color: rgba(map-get($theme, $key), $alpha: 0.2);
+                    border: 1px solid map-get($theme, $key);
+                }
+                &:hover, &:active {
+                    color: $white;
+                    background-color: map-get($theme, $key);
+                }
+                @include when('disabled') {
+                    & {
+                        color: rgba(map-get($theme, $key), $alpha: 0.8);
+                        background-color: rgba(map-get($theme, $key), $alpha: 0.2);
+                        border: 1px solid rgba(map-get($theme, $key), $alpha: 0.8);
+                    }
+                }
+            }
+
+        }
+    }
+
+    @include type(button, 'default') {
+        color: $word-color-default;
+        border: 1px solid $border-color-default;
+        background-color: transparent;
+        &:hover, &:active {
+            color: map-get($theme, 'primary');
+            border: 1px solid map-get($theme, 'primary');
+            background-color: rgba(map-get($theme, 'primary'), $alpha: 0.1);
+        }
+        @include when('disabled') {
+            cursor: not-allowed;
+            opacity: 0.5;
+            &:hover, &:active {
+                color: $word-color-default;
+                border: 1px solid $border-color-default;
+                background-color: transparent;
+            }
+        }
+        @include when('plain') {
+            &:hover, &:active {
+                background-color: transparent;
+            }
+        }
+    }
+
+    @each $key in ('large', 'medium', 'small', 'mini') {
+        @include type(button, $key) {
+            padding: map-get($padding-button, $key);
+            @include when('circle') {
+                & {
+                    border-radius: map-get($border-radius, 'circle');
+                    padding: map-get($padding-button-circle, $key);
+                }
+            }
+        }
+    }
+
+    @include type(button, 'text') {
+        padding: 0;
+        background-color: transparent;
+        color: map-get($theme, 'primary');
+        &:hover, &:active {
+            color: rgba(map-get($theme, 'primary'), $alpha: 0.8);
+        }
+        @include when('disabled') {
+            cursor: not-allowed;
+            opacity: 0.5;
+            &:hover, &:active {
+                padding: 0;
+                background-color: transparent;
+                color: map-get($theme, 'primary');
+            }
+        }
+    }
+
+    @include when('round') {
+        border-radius: map-get($border-radius, 'round');
+    }
+
+    @include when('circle') {
+        border-radius: map-get($border-radius, 'circle');
+    }
+}
