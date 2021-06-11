@@ -28,6 +28,7 @@ import { defineComponent, PropType } from 'vue'
 type MyButtonType = PropType<ComponentType  |'text' | 'default' >;
 type MyButtonSize = PropType<ComponentSize>;
 type MyButtonnativeType = PropType<'button' | 'submit' | 'reset'>;
+
 interface MyButtonProps {
   type: MyButtonType
   size: ComponentSize
@@ -70,9 +71,6 @@ export default defineComponent({
   setup(props: MyButtonProps){
     // console.log(props)
     return {}
-  },
-  created() {
-    console.log(' ')
   },
 })
 </script>

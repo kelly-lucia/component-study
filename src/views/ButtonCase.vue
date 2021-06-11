@@ -26,12 +26,12 @@
     <Button :type="'info'" :round="true">信息按钮</Button>
   </div>
   <div style="padding: 10px 0">
-    <Button :type="'default'" :circle="true">图</Button>
-    <Button :type="'primary'" :circle="true">图</Button>
-    <Button :type="'success'" :circle="true">图</Button>
-    <Button :type="'warning'" :circle="true">图</Button>
-    <Button :type="'danger'" :circle="true">图</Button>
-    <Button :type="'info'" :circle="true">图</Button>
+    <Button :type="'default'" :circle="true"><Icon :name="'edit'" /></Button>
+    <Button :type="'primary'" :circle="true"><Icon :name="'delete'" /></Button>
+    <Button :type="'success'" :circle="true"><Icon :name="'refresh'" /></Button>
+    <Button :type="'warning'" :circle="true"><Icon :name="'search'" /></Button>
+    <Button :type="'danger'" :circle="true"><Icon :name="'back'" /></Button>
+    <Button :type="'info'" :circle="true"><Icon :name="'more'" /></Button>
   </div>
   <h4>禁用按钮</h4>
   <div style="padding: 10px 0">
@@ -67,9 +67,9 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-// import { Options, Vue } from 'vue-class-component'
+import Icon from '../components/Icon/Icon.vue'
 import Button from '../components/Button/Button.vue'
 export default defineComponent({
-  components:{ Button },
+  components:{ Button, Icon },
 })
 </script>

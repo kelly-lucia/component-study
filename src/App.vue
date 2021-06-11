@@ -1,10 +1,18 @@
 <template>
+  <link rel="stylesheet" href="@/assets/fonts.icons/iconfont.css">
   <div class="home">
-    <div class="header"></div>
+    <div class="header">
+    </div>
     <div class="content">
       <div class="left">
         <p>
           <router-link to="/button">Button</router-link>
+        </p>
+        <p>
+          <router-link to="/icon">Icon</router-link>
+        </p>
+        <p>
+          <router-link to="/card">Card</router-link>
         </p>
       </div>
       <div class="right">
@@ -19,6 +27,7 @@
 
 <style lang="scss">
 @import url(./theme/common.scss);
+
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -43,7 +52,6 @@
     background-color: #f1f1f1;
 
     p {
-      padding: 15px;
       text-align: center;
     }
   }

@@ -1,0 +1,27 @@
+@import '../../theme/minixs.scss';
+
+@include name(card) {
+    display: inline-block;
+    border: 1px solid $border-color-default;
+    border-radius: map-get($border-radius, 'mini');
+
+
+    @include type(card, header) {
+        border-bottom: 1px solid $border-color-default;
+        padding: $padding-default;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    @include type(card, content) {
+        padding: $padding-default;
+    }
+
+    @each $key in ('none','normal','rotate','raise','todolist' ) {
+
+    }
+    @include type(card, content) {
+        padding: $padding-default;
+    }
+
+}
