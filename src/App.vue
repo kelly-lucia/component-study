@@ -5,25 +5,30 @@
     </div>
     <div class="content">
       <div class="left">
-        <p>
-          <router-link to="/button">Button</router-link>
-        </p>
-        <p>
-          <router-link to="/icon">Icon</router-link>
-        </p>
-        <p>
-          <router-link to="/card">Card</router-link>
+        <p v-for="router in routerList" :key="router.path">
+          <router-link :to="router.path">  {{ router.name }}</router-link>
         </p>
       </div>
       <div class="right">
         <router-view />
       </div>
     </div>
-    <!-- <router-link to="/">Home</router-link> | -->
-    <!-- <router-link to="/about">About</router-link> -->
   </div>
-  <!-- <router-view /> -->
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
+  data() {
+    return {
+      routerList: [],
+    }
+  },
+  created() {
+    this.routerList = this.$router.getRoutes()
+  },
+})
+</script>
 
 <style lang="scss">
 @import url(./theme/common.scss);

@@ -68,9 +68,11 @@ export default defineComponent({
     round: Boolean,
     circle: Boolean,
   },
-  setup(props: MyButtonProps){
-    // console.log(props)
-    return {}
+  methods: {
   },
+  // setup(props: MyButtonProps){
+  //   // console.log(props)
+  //   return {}
+  // },
 })
 </script>

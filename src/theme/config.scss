@@ -2,6 +2,7 @@ $namespace: 'my'!default;
 $state-prefix: 'is-'!default;
 $modifier-separator: '--'!default;
 
+$theme-color: rgb(64, 158, 255);
 $black: black!default;
 $white: white!default;
 $theme: (
@@ -13,9 +14,11 @@ $theme: (
 )!default;
 
 $word-color-default: #606266!default;
-$border-color-default: #dcdfe6!default;
+$border-color-default: #ebebeb!default;
+$border-color-emphasize:#dcdfe6!default;
 
 $padding-default: 12px!default;
+$margin-default: 12px!default;
 
 $border-radius: (
     mini: 5px,
@@ -40,5 +43,11 @@ $padding-button-circle: (
 $box-shadow: (
     none: none,
     normal: 0 2px 12px 0 rgba(0,0,0,.1),
-    todolist: '0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6,0 9px 1px -3px rgba(0, 0, 0, 0.2),0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2)'
+
+
+
+    // todolist: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6,
+    //             0 9px 1px -3px rgba(0, 0, 0, 0.2),0 16px 0 -6px #f6f6f6, 
+    //             0 17px 2px -6px rgba(0, 0, 0, 0.2)
+
 )!default;

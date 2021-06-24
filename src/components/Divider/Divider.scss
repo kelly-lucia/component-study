@@ -1,0 +1,43 @@
+@import '../../theme/minixs.scss';
+
+@include name(divider) {
+
+    background-color: $border-color-emphasize;
+    position: relative;
+
+    @include type(divider, horizontal) {
+        height: 1px;
+        margin: 24px 0;
+        @include type(divider, text) {
+            position: absolute;
+            display: inline-block;
+            padding: 2px 12px;
+            background-color: $white;
+            transform: translateY(-50%);
+
+            @include type(divider, left) {
+                left: 20px;
+            }
+    
+            @include type(divider, center) {
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+    
+            @include type(divider, right) {
+                right: 20px;
+            }
+        }
+    }
+
+    @include type(divider, vertical) {
+        display: inline-block;
+        width: 1px;
+        height: 1rem;
+        margin: 0 8px;
+        vertical-align: middle;
+    }
+}
+
+
+

@@ -1,0 +1,39 @@
+@import '../../theme/minixs.scss';
+
+@include name(input) {
+    display: flex;
+    position: relative;
+
+    input {
+        padding: 10px 20px;
+        // padding: 20px 10px;
+    }
+
+    @include type(input, prepend) {
+        padding: 10px 20px;
+        background-color: #F5F7FA;
+        color: #909399;
+        border: 1px solid #DCDFE6;
+    }
+
+    @include type(input, prefix) {
+        color: #C0C4CC;
+        text-align: center;
+        position: absolute;
+    }
+
+    @include type(input, suffix) {
+        // padding: 20px 10px;
+        color: #C0C4CC;
+        text-align: center;
+        position: absolute;
+    }
+
+    @include type(input, append) {
+        padding: 10px 20px;
+        background-color: #F5F7FA;
+        color: #909399;
+        border: 1px solid #DCDFE6;
+    }
+}
+

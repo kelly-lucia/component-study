@@ -1,10 +1,12 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-  </div>
+  <h1>Input</h1>
+  <Card>11</Card>
 </template>
 
 <script lang="ts">
+import Card from '../components/Card/Card.vue'
 import { defineComponent } from 'vue'
-export default defineComponent({})
+export default defineComponent({
+  components: { Card },
+})
 </script>

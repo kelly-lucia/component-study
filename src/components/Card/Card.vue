@@ -13,6 +13,9 @@
     <div class="my-card--content">
       <slot></slot>
     </div>
+    <footer v-if="$slots.footer" class="my-card--footer">
+      <slot name="footer"></slot>
+    </footer>
   </div>
 </template>
 
@@ -35,9 +38,6 @@ export default defineComponent({
       type: Boolean,
       default: true,
     },
-  },
-  created() {
-    console.log(this.$slots)
   },
 })
 </script>
